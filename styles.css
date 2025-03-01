@@ -1,0 +1,225 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans&display=swap');
+
+/* Variables */
+:root {
+    --primary-color: #ff6600; /* Orange */
+    --secondary-color: #333;   /* Dark gray */
+    --background-color: #f4f4f4; /* Light gray */
+    --text-color: #000;
+    --card-background: #fff;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav__item {
+    margin-left: 1rem;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--primary-color);
+}
+
+.nav__link--active {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero__description {
+    font-size: 1.2rem;
+}
+
+/* Intro Section */
+.intro__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro__description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social__link:hover {
+    color: var(--primary-color);
+}
+
+/* Card Styles (for other pages) */
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+@media (max-width: 768px) {
+    .gallery__item {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery__item {
+        width: 100%;
+    }
+}
+.details__content {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid var(--secondary-color);
+}
+
+.details__back,
+.details__edit {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.columns {
+    display: flex;
+    gap: 1rem;
+}
+
+.columns__item {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    flex: 1;
+}
+
+.columns__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .columns {
+        flex-wrap: wrap;
+    }
+    .columns__item {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columns__item:last-child {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .columns__item {
+        flex: 0 0 100%;
+    }
+}
+
+.canvas-art {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.canvas-container {
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
